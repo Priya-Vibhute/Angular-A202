@@ -1,0 +1,5 @@
+<p>parent works!</p>
+
+<p>id :{{receivedStudent.id}}  name: {{receivedStudent.name}}</p>
+<app-child [receivedData]="parentData" (childData)="recievedMessage($event)" (elements)="receivedArray($event)" (students)="getStudent($event)"></app-child>
+

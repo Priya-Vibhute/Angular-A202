@@ -1,0 +1,67 @@
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Data Binding
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="container border border-info p-4">
+            <h4>Data Binding</h4>
+            <p>One way Data Binding</p>
+            <div class="container">
+                <p>Interpolation</p>
+                      <p>My name is {{name}}</p>
+                      <hr>
+        
+                <p>Property Binding</p>
+                     <input type="text" [value]="name">
+                     <input type="text" [value]="'ABC'">
+                     <h3></h3>
+                     <hr>
+        
+               <p>Style Binding</p>
+             <p [style.color]="color">Hello</p>
+        
+             <p [style.border]="border" 
+            >Hello</p>
+        
+             <h2 [style.background-color]="isError?'red':'green'">Hello</h2>
+        
+            <hr>
+        
+            <p>Event Binding</p>
+        
+            <button class="btn btn-primary" 
+            (click)="showAlert()">Click</button>
+        
+            <button class="btn btn-primary ms-3" 
+            (click)="changeBorder()">change border</button>
+        
+        
+            <div class="bg-dark circle mt-3" 
+            [style.border-radius]="isError?'':'50%'"
+            (click)="makeCircle()">
+        
+            </div>
+        
+                
+        
+                     
+            </div>
+            <p>Two way Data Binding</p>
+            <h1>{{name}}</h1>
+            <input type="text" [(ngModel)]="name">
+            <hr>
+        
+            <input type="number" [(ngModel)]="firstNum">
+            <input type="number" [(ngModel)]="secondNum">
+            <h3>Addition is {{firstNum+secondNum}}</h3>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
