@@ -1,0 +1,47 @@
+<p>directive-example works!</p>
+
+<h3 *ngIf="status">This is heading</h3>
+
+
+<hr>
+
+<h3 *ngIf="loggedIn ; else elseBlock">Logged In</h3>
+
+<ng-template #elseBlock>
+  <h3>You are logged out</h3>
+</ng-template>
+
+<button class=" btn btn-primary m-3" (click)="login()">{{loggedIn?"Logout":"Login"}}</button>
+
+
+<hr>
+
+<div *ngIf="status; then x else y "></div>
+
+<ng-template #x>
+   <h3>Hello</h3>
+</ng-template>
+
+<ng-template #y>
+   <h3>Bye</h3>
+</ng-template>
+
+<hr>
+<h5 *ngFor="let x of data;index as b; first as f; last as l" class="bg-danger text-white text-center m-3">
+    {{x}}  {{b}} 
+    <span class="badge bg-secondary" *ngIf="f">New</span>
+    <span class="badge bg-warning" *ngIf="l">Last</span>
+
+</h5>
+<hr>
+
+<div *ngFor="let color of colors;index as i" class="circle" [style.background-color]="color">
+{{i}}
+</div>
+
+<hr>
+
+
+<app-ng-switch-example><app-ng-switch-example>
+
+
